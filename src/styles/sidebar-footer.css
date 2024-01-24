@@ -1,7 +1,9 @@
 body {
-    background-color: #000;
+    background-color: var(--bg-page);
     font-family: var(--font-dm-sans);
 }
+
+
 
 .sidebar {
     position: fixed;
@@ -13,7 +15,7 @@ body {
 }
 
 .sidebar__navigation {
-    background-color: #121212;
+    background-color: var(--bg-containers);
     border-radius: 8px;
 
     /* A linha abaixo estava no codigo durante a aula 1, porém acredito que foi inserida de forma equifocada. */
@@ -21,7 +23,7 @@ body {
 }
 
 .sidebar__navigation .logo {
-    background: #121212;
+    background: var(--bg-containers);
     display: flex;
     border-radius: 8px;
     padding: 16px 0 0 16px;
@@ -42,20 +44,20 @@ body {
 }
 
 .sidebar nav ul li a {
-    color: #b3b3b3;
+    color: var(--color-1);
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;    
 }
 
 .library {
-    background-color: #121212;
+    background-color: var(--bg-containers);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     padding: 4px 8px;
-    color: #b3b3b3;
+    color: var(--color-1);
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
@@ -69,7 +71,7 @@ body {
 .library .library__button {
     display: flex;
     margin-right: 10px;
-    color: #b3b3b3;
+    color: var(--color-1);
     background-color: transparent;
     border: 0;
     font-size: 14px;
@@ -78,6 +80,7 @@ body {
     text-decoration: none;
     text-transform: none;
     padding: 20px 10px;
+    cursor: pointer;
 }
 
 .library .library__button .fa {
@@ -89,6 +92,7 @@ body {
 
 .library .library__content .fa-plus {
     margin: 24px 10px;
+    cursor: pointer;
 }
 
 .section-playlist {
@@ -96,8 +100,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
-    background-color: #242424;
-    color: #b3b3b3;
+    background-color: var(--bg-spotlight);    
     font-weight: 600;
     font-size: 14px;
     margin: 8px 0px;
@@ -112,7 +115,7 @@ body {
 
 .section-playlist .section-playlist__content .text {
     padding-bottom: 14px;
-    color: #fff;
+    color: var(--color-4);
 }
 
 .section-playlist .section-playlist__content .title {
@@ -127,8 +130,8 @@ body {
 .section-playlist .section-playlist__content .section-playlist_button {
     display: flex;
     justify-content: center;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--bg-buttons);
+    color: var(--color-3);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
@@ -138,6 +141,7 @@ body {
     margin-top: 12px;
     border: 0px;
     width: 113px;
+    cursor: pointer;
 }
 
 .sidebar .library .cookies {
@@ -158,9 +162,9 @@ body {
 }
 
 .languages .languages__button {
-    background-color: transparent;
-    border: 1px solid #878787;
-    color: #fff;
+    background-color: var(--bg-buttons);
+    border: 1px solid var(--color-3);
+    color: var(--color-3);
     cursor: pointer;
     font-weight: bold;
     align-items: center;
@@ -175,16 +179,17 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, #ae2896, #509bf5);
-    padding: 15px 40px;
+    background: linear-gradient(to right, var(--color-4), #D90368);
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
+    margin: 8px 8px 5px 8px;
 }
 .disclaimer-premium .text {
     flex-shrink: 0;
 }
 .disclaimer-premium .disclaimer-premium__title {
-    color: #ffffff;
+    color: var(--color-1);
     text-transform: uppercase;
     font-weight: 400;
     font-size: 12px;
@@ -192,14 +197,14 @@ body {
 }
 
 .disclaimer-premium .disclaimer-premium__subtitle {
-    color: #ffffff;
+    color: var(--color-1);
     font-size: 14px;
     font-weight: 500;
 }
 
 .disclaimer-premium button {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--bg-buttons);
+    color: var(--color-1);
     font-size: 16px;
     font-weight: bold;
     padding: 14px 30px;
@@ -207,8 +212,15 @@ body {
     border-radius: 40px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: 0.5s ease;
 }
 
 .disclaimer-premium button:hover {
-transform: scale(1.1); /* Aumenta o tamanho do botão em 10% ao passar o mouse */
+transform: scale(1.05); /* Aumenta o tamanho do botão em 10% ao passar o mouse */
+}
+
+/* INVERTER CORES DE BOTOES */
+
+.section-playlist_button:hover, .languages__button:hover, .login:hover, .disclaimer-premium .button :hover{
+    filter: invert(100%);
 }

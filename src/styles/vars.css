@@ -5,4 +5,12 @@
     /* COLORS */
     --bg-icon: #131313;
     --bg-arrow-color: rgba(0,0,07);
+    --bg-page: #000;
+    --bg-containers: #3D2645;
+    --bg-spotlight: #ADA8B6;
+    --bg-buttons: #3D2645;
+    --color-1: #fff;
+    --color-2: #000;
+    --color-3: #ADA8B6;
+    --color-4: #3D2645;
 }

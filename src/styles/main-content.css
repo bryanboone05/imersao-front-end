@@ -1,10 +1,10 @@
 /* HEADER */
 
 .main-container {
-    max-width: 80vw;
+    max-width: 100vw;
     height: 100vh;
     margin-left: 320px;
-    margin-right: 56px;
+    /* margin-right: 56px; */
 }
 
 .header__navigation {
@@ -14,7 +14,7 @@
     padding: 16px;
     margin: 10px;
     border-radius: 8px;
-    background-color: #121212;
+    background-color: var(--bg-containers);
 }
 
 .header__navigation .navigation {
@@ -52,7 +52,7 @@
     width: 364px;
     height: 48px;
     margin-left: 8px;
-    background-color: #242424;
+    background-color: var(--bg-spotlight);
     border-radius: 500px;
     border: 1px solid transparent;
 }
@@ -67,7 +67,7 @@
     background: transparent;
     border: none;
     padding: 0 100px 0 12px;
-    color: #fff;
+    color: var(--color-4);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -75,7 +75,7 @@
 }
 
 .header__login .subscribe {
-    color: #a7a7a7;
+    color: var(--color-1);
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
@@ -85,11 +85,17 @@
 }
 
 .header__login .login {
+    background-color: var(--bg-buttons);
     width: 100px;
     height: 48px;
-    color: #000;
+    color: var(--color-1);
     font-size: 16px;
     font-weight: 700;
     border-radius: 40px;
+    border: 2px solid var(--color-3);
     cursor: pointer;
+}
+
+.header__search input::placeholder{
+    color: var(--color-4);
 }
