@@ -47,7 +47,7 @@ body {
     color: var(--color-1);
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;    
+    font-size: 14px;
 }
 
 .library {
@@ -100,7 +100,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
-    background-color: var(--bg-spotlight);    
+    background-color: var(--bg-spotlight);
     font-weight: 600;
     font-size: 14px;
     margin: 8px 0px;
@@ -185,9 +185,11 @@ body {
     justify-content: space-between;
     margin: 8px 8px 5px 8px;
 }
+
 .disclaimer-premium .text {
     flex-shrink: 0;
 }
+
 .disclaimer-premium .disclaimer-premium__title {
     color: var(--color-1);
     text-transform: uppercase;
@@ -213,14 +215,43 @@ body {
     cursor: pointer;
     flex-shrink: 0;
     transition: 0.5s ease;
+    /* Exemplo de como usar a animação infinitamente */
+    /* animation: scale 2s infinite; */
 }
 
+
+/* Animação de ampliar */
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+        filter: invert(0%);
+    }
+
+    50% {
+        transform: scale(1.05);
+        filter: invert(100%);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: invert(0%);
+    }
+}
+
+/* Aumentar o tamanho do botão em 5% ao passar o mouse */
 .disclaimer-premium button:hover {
-transform: scale(1.05); /* Aumenta o tamanho do botão em 10% ao passar o mouse */
+
+    transform: scale(1.05); 
+    
+    
 }
 
 /* INVERTER CORES DE BOTOES */
 
-.section-playlist_button:hover, .languages__button:hover, .login:hover, .disclaimer-premium .button :hover{
+.section-playlist_button:hover,
+.languages__button:hover,
+.login:hover,
+.disclaimer-premium .button:hover {
     filter: invert(100%);
 }
